@@ -1,3 +1,13 @@
 body{
     background-color: salmon;
 }
+.heading{
+    margin-top: 10vh;
+}
+.question1{
+    float: center;
+    margin-left: -1%;
+}
+.hide{
+    display: none;
+}
