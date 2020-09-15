@@ -70,6 +70,7 @@ var timerInterval;
 var wrongAnswer = document.querySelector(".wrongAns");
 var correctAnswer = document.querySelector(".correctAns");
 var points = document.querySelector("#score");
+var questionNum = [0];
 
 submitButton.addEventListener("click", function(){
     // Hide the start button
@@ -96,17 +97,17 @@ submitButton.addEventListener("click", function(){
 
 function nextQuestion() {
     // TODO: find a way to make the 0 dynamic so that the first time it is 0, second time is 1, third time is 2, so on and so forth
+    questionNum++;
     
-    for (var i=0; i < questions.length; i++){
     
     
-    questionTitle.textContent = questions[i].question;
-    answer1.textContent = questions[i].answer1;
-    answer2.textContent = questions[i].answer2;
-    answer3.textContent = questions[i].answer3;
-    answer4.textContent = questions[i].answer4;
+    questionTitle.textContent = questions[questionNum].question;
+    answer1.textContent = questions[questionNum].answer1;
+    answer2.textContent = questions[questionNum].answer2;
+    answer3.textContent = questions[questionNum].answer3;
+    answer4.textContent = questions[questionNum].answer4;
 
-}
+
     // document.querySelector("#answer3").addEventListener("click"){
     //             alert("right!");
     // }
@@ -124,7 +125,7 @@ function nextQuestion() {
 
 // incorrectAns();
 function incorrectAns (){
-    wrongAnswer = document.querySelector(".wrongAns").textContent = "Wrong Answer!"
+    wrongAnswer.textContent = "Wrong Answer!"
 }
 wrongAnswer.addEventListener("click", incorrectAns);
 //correctAns ();
