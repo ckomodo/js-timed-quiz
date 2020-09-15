@@ -14,17 +14,17 @@
 <div class="heading text-center">
     <h1>JS quiz challenge</h1>
     <h2 class="timeLeft" id="timer">time left: <span id="seconds">0s</span> </h2>
-    <h3 id="score">Score:</h3>
+    <h3>Score: <span id="score">0</span></h3>
     <button id="startTime">START</button>
 </div>
 <br>
 <div class="question text-center hide">
     <!--Question 1-->
     <p id="question-title"></p>
-    <button id="answer1"></button>
-    <button id="answer2"></button>
-    <button id="answer3"></button>
-    <button id="answer4"></button>
+    <button  class="wrongAns" id="answer1"></button>
+    <button class="wrongAns" id="answer2"></button>
+    <button onclick="rightAnswer()" class ="correctAns" id="answer3"></button>
+    <button class="wrongAns" id="answer4"></button>
 
     <p id="display"></p>
 

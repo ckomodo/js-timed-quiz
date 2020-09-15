@@ -55,6 +55,7 @@ var questions = [
         correctAnswer: "",
     }
 ]
+console.log(questions)
 
 
 var submitButton = document.querySelector("#startTime");
@@ -66,6 +67,10 @@ var answer3 = document.querySelector("#answer3");
 var answer4 = document.querySelector("#answer4");
 var counter = 100;
 var timerInterval;
+var wrongAnswer = document.querySelector(".wrongAns");
+var correctAnswer = document.querySelector(".correctAns");
+var points = document.querySelector("#score");
+
 submitButton.addEventListener("click", function(){
     // Hide the start button
     submitButton.className = "hide";
@@ -90,16 +95,21 @@ submitButton.addEventListener("click", function(){
 
 
 function nextQuestion() {
-    // TODO: find a way to make the 0 dynamic so that the firts time it is 0, second time is 1, third time is 2, so on and so forth
-    questionTitle.textContent = questions[0].question;
-    answer1.textContent = questions[0].answer1;
-    answer2.textContent = questions[0].answer2;
-    answer3.textContent = questions[0].answer3;
-    answer4.textContent = questions[0].answer4;
+    // TODO: find a way to make the 0 dynamic so that the first time it is 0, second time is 1, third time is 2, so on and so forth
+    
+    for (var i=0; i < questions.length; i++){
+    
+    
+    questionTitle.textContent = questions[i].question;
+    answer1.textContent = questions[i].answer1;
+    answer2.textContent = questions[i].answer2;
+    answer3.textContent = questions[i].answer3;
+    answer4.textContent = questions[i].answer4;
 
-    document.querySelector("#answer3").addEventListener("click");{
-                alert("right!");
-    }
+}
+    // document.querySelector("#answer3").addEventListener("click"){
+    //             alert("right!");
+    // }
 
  
 
@@ -110,5 +120,21 @@ function nextQuestion() {
     // TODO: when you get to the last one, clearInterval
 
 
-
 }
+
+// incorrectAns();
+function incorrectAns (){
+    wrongAnswer = document.querySelector(".wrongAns").textContent = "Wrong Answer!"
+}
+wrongAnswer.addEventListener("click", incorrectAns);
+//correctAns ();
+function rightAnswer (){
+    correctAnswer = document.querySelector(".correctAns").textContent = "Correct Answer!"
+}
+correctAnswer.addEventListener("click", rightAnswer);
+
+
+// function scoreTab (){
+//     points.textContent = count;
+// }
+
