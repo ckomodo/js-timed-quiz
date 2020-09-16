@@ -31,28 +31,28 @@ var questions = [
         correctAnswer: "Beats by Dre Headphones",
     },
     {
-        question: "",
-        answer1: "",
-        answer2: "",
-        answer3: "",
-        answer4: "",
-        correctAnswer: "",
+        question: "Who can learn Javascript?",
+        answer1: "College graduates only",
+        answer2: "People who are good at math",
+        answer3: "Millenials only",
+        answer4: "Anyone",
+        correctAnswer: "Anyone",
     },
     {
-        question: "",
-        answer1: "",
-        answer2: "",
-        answer3: "",
-        answer4: "",
-        correctAnswer: "",
+        question: "Where does Javascript run?",
+        answer1: "In the browser",
+        answer2: "In the keyboard",
+        answer3: "In the mouse",
+        answer4: "In the tracks",
+        correctAnswer: "In the browser",
     },
     {
-        question: "",
-        answer1: "",
-        answer2: "",
-        answer3: "",
-        answer4: "",
-        correctAnswer: "",
+        question: "Which one is a library of Javascript?",
+        answer1: "React",
+        answer2: "Google Chrome",
+        answer3: "Opera Mini",
+        answer4: "HTTPS",
+        correctAnswer: "React",
     }
 ]
 console.log(questions)
@@ -70,7 +70,7 @@ var timerInterval;
 var wrongAnswer = document.querySelector(".wrongAns");
 var correctAnswer = document.querySelector(".correctAns");
 var points = document.querySelector("#score");
-var questionNum = [0];
+var questionNumIndex = 0;
 
 submitButton.addEventListener("click", function(){
     // Hide the start button
@@ -97,17 +97,17 @@ submitButton.addEventListener("click", function(){
 
 function nextQuestion() {
     // TODO: find a way to make the 0 dynamic so that the first time it is 0, second time is 1, third time is 2, so on and so forth
-    questionNum++;
     
     
     
-    questionTitle.textContent = questions[questionNum].question;
-    answer1.textContent = questions[questionNum].answer1;
-    answer2.textContent = questions[questionNum].answer2;
-    answer3.textContent = questions[questionNum].answer3;
-    answer4.textContent = questions[questionNum].answer4;
+    
+    questionTitle.textContent = questions[questionNumIndex].question;
+    answer1.textContent = questions[questionNumIndex].answer1;
+    answer2.textContent = questions[questionNumIndex].answer2;
+    answer3.textContent = questions[questionNumIndex].answer3;
+    answer4.textContent = questions[questionNumIndex].answer4;
 
-
+    
     // document.querySelector("#answer3").addEventListener("click"){
     //             alert("right!");
     // }
@@ -124,17 +124,30 @@ function nextQuestion() {
 }
 
 // incorrectAns();
-function incorrectAns (){
-    wrongAnswer.textContent = "Wrong Answer!"
-}
-wrongAnswer.addEventListener("click", incorrectAns);
-//correctAns ();
-function rightAnswer (){
-    correctAnswer = document.querySelector(".correctAns").textContent = "Correct Answer!"
-}
-correctAnswer.addEventListener("click", rightAnswer);
+// function incorrectAns (){
+//     wrongAnswer.textContent = "Wrong Answer!"
+//     nextQuestion();
+// }
+// wrongAnswer.addEventListener("click", incorrectAns);
+// //correctAns ();
+// function rightAnswer (){
+//     correctAnswer.textContent = "Correct Answer!"
+//     nextQuestion();
+// }
+// correctAnswer.addEventListener("click", rightAnswer);
 
-
+question.addEventListener("click",function(event){
+    if(event.target.matches("button")){
+        if(event.target.textContent === questions[questionNumIndex].correctAnswer){
+            console.log("Correct");
+        }else{
+            console.log("Wrong");
+        }
+        questionNumIndex++;
+        nextQuestion()
+    }
+    
+})
 // function scoreTab (){
 //     points.textContent = count;
 // }
