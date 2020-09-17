@@ -14,6 +14,7 @@ Technologies used in this program are HTML, CSS and Javascript
 
 
 ## URL of deployed site
+https://github.com/ckomodo/js-timed-quiz
 
 ## Author
 Chris Sakwa Wesonga is a full stack web developer in Seattle, WA. 
