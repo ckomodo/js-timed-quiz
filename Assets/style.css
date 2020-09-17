@@ -1,0 +1,40 @@
+body{
+    background-image: linear-gradient(white, black);
+}
+main{
+    background-image: url("https://c0.wallpaperflare.com/preview/900/181/315/black-and-white-cassette-tape-classic-grayscale.jpg");
+
+    height: 70vh;
+    width: 50vw;
+    float: center;
+    margin: auto;
+    color: rgb(57, 247, 9)
+}
+h1{
+    margin-top: 20vh;
+}
+.heading{
+    margin-bottom: 15%;
+    color: rgb(1, 253, 241);
+    
+
+}
+.question1{
+    float: center;
+    margin-left: -1%;
+}
+.hide{
+    display: none;
+}
+
+#userInfo  { 
+    display: flex;
+    float: center;
+    margin: 0 auto;
+}
+#userButton{
+    display: flex;
+    float: center;
+    margin: 0 auto;
+
+}

@@ -11,35 +11,30 @@
 </head>
 
 <body>
-<div class="heading text-center">
-    <h1>JS quiz challenge</h1>
-    <h2 class="timeLeft" id="timer">time left: <span id="seconds">0s</span> </h2>
-    <h3>Score: <span id="score">0</span></h3>
-    <button id="startTime">START</button>
-</div>
-<br>
-<div class="question text-center hide">
-    <!--Question 1-->
-    <p id="question-title"></p>
-    <button  class="wrongAns" id="answer1"></button>
-    <button class="wrongAns" id="answer2"></button>
-    <button class ="correctAns" id="answer3"></button>
-    <button class="wrongAns" id="answer4"></button>
+    <main>
+        <div class="heading text-center">
+            <h1>JS quiz challenge</h1>
+            <h2 class="timeLeft" id="timer">time left: <span id="seconds">0s</span> </h2>
+            <h3>Score: <span id="score">0</span></h3>
+            <button id="startTime">START</button>
+        </div>
+        <br>
+        <div class="question text-center hide">
+            <!--Question 1-->
+            <p id="question-title"></p>
+            <button id="answer1"></button>
+            <button id="answer2"></button>
+            <button id="answer3"></button>
+            <button id="answer4"></button>
 
-    <p id="display"></p>
+            <p id="display"></p>
 
-    <!--Question 2-->
-
-    <!-- <p id="question-title2"></p>
-    <button id="answer1"></button>
-    <button id="answer2"></button>
-    <button id="answer3"></button>
-    <button id="answer4"></button> -->
-</div>
-
-
-
-
+        </div>
+        <div class="hideInitials">
+            <input type="text" id="userInfo" placeholder="initials">
+            <input type="submit" id="userButton">
+        </div>
+    </main>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -51,4 +46,5 @@
         crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
